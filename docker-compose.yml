@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: c2n-launchpad
+    ports:
+      - "5432:5432"
+    volumes:
+      - /db/data:/var/lib/postgresql/data
